@@ -93,6 +93,7 @@ TARGET_BOARD_PLATFORM := kona
 
 # Recovery
 TARGET_NO_RECOVERY := false
+TARGET_RECOVERY_QCOM_RTC_FIX := true
 TARGET_RECOVERY_DEVICE_MODULES += \
     android.hidl.base@1.0 \
     ashmemd \
@@ -123,7 +124,6 @@ PLATFORM_VERSION := 16.1.0
 # TWRP Configuration
 TW_THEME := portrait_hdpi
 TW_EXTRA_LANGUAGES := true
-TW_SCREEN_BLANK_ON_BOOT := true
 TW_INPUT_BLACKLIST := "hbtp_vm"
 TW_USE_TOOLBOX := true
 TW_INCLUDE_REPACKTOOLS := true
@@ -138,3 +138,21 @@ TW_RECOVERY_ADDITIONAL_RELINK_LIBRARY_FILES += \
     $(TARGET_OUT_SHARED_LIBRARIES)/libion.so \
     $(TARGET_OUT_SHARED_LIBRARIES)/libpcrecpp.so \
     $(TARGET_OUT_SHARED_LIBRARIES)/libxml2.so
+TARGET_USE_CUSTOM_LUN_FILE_PATH := /config/usb_gadget/g1/functions/mass_storage.0/lun.%d/file
+TW_BRIGHTNESS_PATH := "/sys/class/backlight/panel0-backlight/brightness"
+TW_DEFAULT_BRIGHTNESS := 420
+TW_Y_OFFSET := 104
+TW_H_OFFSET := -104
+TW_EXCLUDE_DEFAULT_USB_INIT := true
+TW_EXCLUDE_ENCRYPTED_BACKUPS := false
+TW_EXCLUDE_TWRPAPP := true
+TW_EXTRA_LANGUAGES := true
+TW_HAS_EDL_MODE := true
+TW_INCLUDE_NTFS_3G := true
+TW_INPUT_BLACKLIST := "hbtp_vm"
+TW_NO_BIND_SYSTEM := true
+TW_NO_EXFAT_FUSE := true
+TW_NO_SCREEN_TIMEOUT := true
+TW_NO_SCREEN_BLANK := true
+TW_SYSTEM_BUILD_PROP_ADDITIONAL_PATHS := build.prop
+TW_OVERRIDE_SYSTEM_PROPS := "ro.build.fingerprint=ro.system.build.fingerprint"
