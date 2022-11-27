@@ -45,6 +45,12 @@ on init
     #Shuangquan.du@PSW.AD.Recovery.0, 2019/08/22, Add for fastbood in recovery mode
     mkdir /config/usb_gadget/g1/functions/ffs.fastboot
     #endif
+    start boot-hal-1-1
+    setprop sys.usb.config adb
+
+on boot
+    chmod 0777 /system/bin/unified-script.sh
+    start unified-script
 
 on property:ro.boot.usbcontroller=*
     setprop sys.usb.controller ${ro.boot.usbcontroller}
