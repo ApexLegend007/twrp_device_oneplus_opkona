@@ -25,6 +25,12 @@
 # ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #
 
+service hal_cryptoeng_oplus /system/bin/hw/vendor.oplus.hardware.cryptoeng@1.0-service
+    class late_start
+    user system
+    group system input sdcard_rw sdcard_r
+    seclabel u:r:recovery:s0
+
 on init
     write /sys/class/backlight/panel0-backlight/brightness 200
     setprop sys.usb.configfs 1

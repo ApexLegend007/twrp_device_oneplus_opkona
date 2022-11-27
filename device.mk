@@ -54,3 +54,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     qcom_decrypt \
     qcom_decrypt_fbe
+
+# Vintf
+PRODUCT_ENFORCE_VINTF_MANIFEST := true
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/prebuilt/system_manifest.xml:$(TARGET_COPY_OUT_RECOVERY)/root/system/manifest.xml \
+    $(LOCAL_PATH)/prebuilt/vendor_manifest.xml:$(TARGET_COPY_OUT_RECOVERY)/root/vendor/manifest.xml
