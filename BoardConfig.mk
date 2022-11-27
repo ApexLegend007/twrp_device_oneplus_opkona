@@ -12,7 +12,7 @@ ALLOW_MISSING_DEPENDENCIES := true
 
 # A/B
 AB_OTA_UPDATER := true
-AB_OTA_PARTITIONS +=
+AB_OTA_PARTITIONS += boot dtbo odm product system system_ext vendor vbmeta vbmeta_system
 
 # Architecture
 TARGET_ARCH := arm64
