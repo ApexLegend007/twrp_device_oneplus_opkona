@@ -31,6 +31,12 @@ PRODUCT_PACKAGES += \
     update_verifier \
     update_engine_sideload
 
+# fastbootd
+PRODUCT_PACKAGES += \
+    android.hardware.fastboot@1.0-impl-mock \
+    fastbootd \
+    resetprop
+
 PRODUCT_PACKAGES += \
     qcom_decrypt \
     qcom_decrypt_fbe
