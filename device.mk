@@ -55,8 +55,14 @@ PRODUCT_PACKAGES += \
     qcom_decrypt \
     qcom_decrypt_fbe
 
+#SHIPPING API
+PRODUCT_SHIPPING_API_LEVEL := 30
+
 # Vintf
 PRODUCT_ENFORCE_VINTF_MANIFEST := true
+
+#VNDK API
+PRODUCT_TARGET_VNDK_VERSION := 32
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/prebuilt/system_manifest.xml:$(TARGET_COPY_OUT_RECOVERY)/root/system/manifest.xml \
