@@ -54,7 +54,7 @@ load_op8pro()
 {
     resetprop "ro.build.product" "OnePlus8Pro"
     resetprop "ro.display.series" "OnePlus 8Pro"
-    resetprop "ro.product.device" "OnePlus8PRO"
+    resetprop "ro.product.device" "OnePlus8Pro"
     resetprop "ro.product.model" "OnePlus 8 Pro"
     resetprop "ro.product.name" "OnePlus8Pro_IND"
     resetprop "ro.product.odm.device" "OnePlus8Pro"
